@@ -1,0 +1,204 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Mplus 1p Bold', sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #010101;
+   border: 4px solid #c6c12f;
+}
+
+.logo {
+    width: 160px;
+    height: 100px;
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin:0;
+    padding:0;
+}
+
+.nav-item a{
+    text-decoration: none;
+}
+
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-item svg {
+    width: 48px;
+    height: 48px;
+}
+
+nav .nav-item a {
+    color: #c6c12f;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.main-content {
+    background-image: url('../assets/images/fondo_1.svg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.izquierda-superior {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+}
+
+.izquierda-superior a {
+    color: #c6c12f;
+    font-size: 24px;
+    font-weight: 700;
+    text-decoration: none;
+    border: 2px solid #c6c12f;
+    border-radius: 8px;
+    padding: 10px 40px;
+    width: 300px;
+    text-align: center;
+}
+
+.derecha-inferior {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.derecha-inferior a {
+    color: #fff;
+    background-color: #1a1a1a;
+    padding: 10px;
+    border: 4px solid #4A4A48;
+    border-radius: 99px;
+}
+
+.derecha-inferior a img {
+    width: 26px;
+    height: 26px;
+}
+
+.acciones {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 15px;
+    margin-top: -40px;
+}
+
+.acciones a {
+     text-decoration: none;
+    background-color: #2f2f2f;
+    color: white;
+    font-size: 20px;
+    font-family: Arial, sans-serif;
+    padding: 15px 80px;
+    border-radius: 10px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.acciones a:hover {
+    background-color: #444;
+}
+
+.card {
+    background-color: #fff;
+    border: 4px solid #c6c12f;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    width: 300px;
+}
+
+.btn-productos {
+    background-color: #c6c12f;
+    color: #010101;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    background: black;
+    color: gold;
+    border: 3px solid gold;
+    border-radius: 30px;
+    padding: 12px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.btn-carrito:hover{
+    background: #222;
+}
+
+.productos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    gap: 60px
+}
+
+.filas {
+    display: flex;
+    flex-direction: row;
+    gap: 60px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: start;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.content .text {
+    font-size: 18px;
+    color: #1a1a1a;
+    font-weight: 400;
+}

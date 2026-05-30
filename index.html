@@ -1,11 +1,174 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Confiteria Digital Adso</title>
+    <link rel="stylesheet" href="styles/styles.css">
+
 </head>
+
 <body>
-    
+    <header>
+        <div class="logo">
+            <img src="./assets/logo final.png" alt="logo">
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li class="nav-item active">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="#c6c12f" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-notebook-pen-icon lucide-notebook-pen">
+                        <path d="M13.4 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-7.4" />
+                        <path d="M2 6h4" />
+                        <path d="M2 10h4" />
+                        <path d="M2 14h4" />
+                        <path d="M2 18h4" />
+                        <path
+                            d="M21.378 5.626a1 1 0 1 0-3.004-3.004l-5.01 5.012a2 2 0 0 0-.506.854l-.837 2.87a.5.5 0 0 0 .62.62l2.87-.837a2 2 0 0 0 .854-.506z" />
+                    </svg>
+                    <a href="">Registro</a>
+                </li>
+                <li class="nav-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="#c6c12f" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-circle-user-round-icon lucide-circle-user-round">
+                        <path d="M17.925 20.056a6 6 0 0 0-11.851.001" />
+                        <circle cx="12" cy="11" r="4" />
+                        <circle cx="12" cy="12" r="10" />
+                    </svg>
+                    <a href="">Iniciar sesión</a>
+                </li>
+                <li class="nav-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="#c6c12f" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-shopping-cart-icon lucide-shopping-cart">
+                        <circle cx="8" cy="21" r="1" />
+                        <circle cx="19" cy="21" r="1" />
+                        <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12" />
+                    </svg>
+                    <a href="">Carrito</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="main-content">
+        <div class="izquierda-superior">
+            <a href="#">Confitería</a>
+            <a href="#">Regalos</a>
+        </div>
+        <div class="derecha-inferior">
+            <a href="#" class="whatsapp">
+                <img src="assets/images/whatsapp.png" alt="WhatsApp">
+            </a>
+            <a href="#">
+                <img src="assets/images/twitter.png" alt="twitter">
+            </a>
+            <a href="#">
+                <img src="assets/images/facebook.png" alt="facebook">
+            </a>
+            <a href="#">
+                <img src="assets/images/instagram.png" alt="instagram">
+            </a>
+        </div>
+    </section>
+    <section class="acciones">
+        <a href="#" class="btn-accion">Pedidos</a>
+        <a href="#" class="btn-accion">Preferencial</a>
+        <a href="#" class="btn-accion">Quienes somos</a>
+    </section>
+    <section class="productos">
+        <div class="filas">
+            <div class="card">
+                <div class="content">
+                    <img src="./assets/images/dulceria/Fruticas.png" alt="Productos de la confiteria digital">
+                    <div class="text">
+                        <p>Dulces Fruticas Surtidas</p>
+                        <p>$ 3.400</p>
+                    </div>
+                </div>
+                <button class="btn-productos">Añadir al carrito</button>
+            </div>
+            <div class="card">
+                <div class="content">
+                    <img src="./assets/images/dulceria/Detodito.png" alt="Productos de la confiteria digital">
+                    <div class="text">
+                        <p>Pasaboca Detodito BBQ</p>
+                        <p>$ 9.300</p>
+                    </div>
+                </div>
+                <button class="btn-productos">Añadir al carrito</button>
+            </div>
+            <div class="card">
+                <div class="content">
+                    <img src="./assets/images/dulceria/Oka loca.png" alt="Productos de la confiteria digital">
+                    <div class="text">
+                        <p>Dulces Oka Loka Nanos</p>
+                        <p>$ 3.000</p>
+                    </div>
+                </div>
+                <button class="btn-productos">Añadir al carrito</button>
+            </div>
+            <div class="card">
+                <div class="content">
+                    <img src="./assets/images/dulceria/Chipsahoy.png" alt="Productos de la confiteria digital">
+                    <div class="text">
+                        <p>Galletas dulces Chips Ahoy</p>
+                        <p>$ 2.700</p>
+                    </div>
+                </div>
+                <button class="btn-productos">Añadir al carrito</button>
+            </div>
+        </div>
+
+        <div class="filas">
+            <div class="card">
+                <div class="content">
+                    <img src="./assets/images/dulceria/Bocadillo.png" alt="Productos de la confiteria digital">
+                    <div class="text">
+                        <p>Bocadillo Dulces Del Valle Relleno </p>
+                        <p>$ 3.100</p>
+                    </div>
+                </div>
+                <button class="btn-productos">Añadir al carrito</button>
+            </div>
+
+            <div class="card">
+                <div class="content">
+                    <img src="./assets/images/dulceria/Coffe.png" alt="Productos de la confiteria digital">
+                    <div class="text">
+                        <p>Dulces Coffee Delight </p>
+                        <p>$ 3.300</p>
+                    </div>
+                </div>
+                <button class="btn-productos">Añadir al carrito</button>
+            </div>
+
+            <div class="card">
+                <div class="content">
+                    <img src="./assets/images/dulceria/Jumbo.png" alt="Productos de la confiteria digital">
+                    <div class="text">
+                        <p>Chocolates Jumbo MiX  </p>
+                        <p>$ 3.500</p>
+                    </div>
+                </div>
+                <button class="btn-productos">Añadir al carrito</button>
+            </div>
+
+            <div class="card">
+                <div class="content">
+                    <img src="./assets/images/dulceria/Felicidades.png" alt="Productos de la confiteria digital">
+                    <div class="text">
+                        <p>Chocolates Triunfo Rellenos  </p>
+                        <p>$ 22.900</p>
+                    </div>
+                </div>
+                <button class="btn-productos">Añadir al carrito</button>
+            </div>
+        </div>
+    </section>
 </body>
+
 </html>
