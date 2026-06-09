@@ -2,21 +2,29 @@
 <html lang="es">
 
 <head>
+    <!-- Permite usar caracteres especiales y tildes    -->
     <meta charset="UTF-8">
+    <!-- Hace que la pagina sea adptable a dispositivos móviles     -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Confiteria Digital Adso</title>
+    <!-- Conexión con el archivo css -->
     <link rel="stylesheet" href="styles/styles.css">
 
 </head>
 
 <body>
+    <!-- Encabezado de la página -->
     <header>
+        <!-- Logo principal -->
         <div class="logo">
             <img src="./assets/logo final.png" alt="logo">
         </div>
+        <!-- Menú de navegación -->
         <nav>
             <ul class="nav-links">
+                <!-- Opciones de rergistro -->
                 <li class="nav-item active">
+                    <!-- Icono SVG -->
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                         stroke="#c6c12f" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round"
                         class="lucide lucide-notebook-pen-icon lucide-notebook-pen">
@@ -30,6 +38,7 @@
                     </svg>
                     <a href="">Registro</a>
                 </li>
+                <!-- Estas son las opciones de inicio de sesión -->
                 <li class="nav-item">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                         stroke="#c6c12f" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round"
@@ -53,12 +62,13 @@
             </ul>
         </nav>
     </header>
-
+    <!-- Esta sección de los enlaces de navegación entre dulceria y regalos -->
     <section class="main-content">
         <div class="izquierda-superior">
             <a href="#">Confitería</a>
             <a href="#">Regalos</a>
         </div>
+        <!-- Redes socilaes-->
         <div class="derecha-inferior">
             <a href="#" class="whatsapp">
                 <img src="assets/images/whatsapp.png" alt="WhatsApp">
@@ -74,21 +84,30 @@
             </a>
         </div>
     </section>
-    <section class="acciones">
-        <a href="#" class="btn-accion">Pedidos</a>
-        <a href="#" class="btn-accion">Preferencial</a>
-        <a href="#" class="btn-accion">Quienes somos</a>
-    </section>
+    
+    <!-- sección de productos -->
     <section class="productos">
+        <!-- Botones de acceso rapido -->
+        <div class="acciones">
+            <a href="#" class="btn-accion">Pedidos</a>
+            <a href="#" class="btn-accion">Preferencial</a>
+            <a href="#" class="btn-accion">Quienes somos</a>
+        </div>
+        <!-- Primera fila de productos -->
         <div class="filas">
+            <!-- Tarjeta de producto -->
             <div class="card">
+                <!-- Contenido de la tarjeta -->
                 <div class="content">
+                    <!-- Imagen del producto -->
                     <img src="./assets/images/dulceria/Fruticas.png" alt="Productos de la confiteria digital">
+                    <!-- Información del producto -->
                     <div class="text">
                         <p>Dulces Fruticas Surtidas</p>
                         <p>$ 3.400</p>
                     </div>
                 </div>
+                <!-- boton de compra -->
                 <button class="btn-productos">Añadir al carrito</button>
             </div>
             <div class="card">
@@ -169,6 +188,61 @@
             </div>
         </div>
     </section>
+    <!-- Menu de filtros -->
+    <section>
+        <!-- Categorias para filtrar productos  -->
+        <div class="contenedor">
+            <nav class="menu-categorias">
+                <a href="#">Marca</a>
+                <a href="#">Tipo</a>
+                <a href="#">Precio</a>
+                <a href="#">Novedades</a>
+            </nav>
+        </div>
+    </section>
+
+    <section>
+        <!-- sección del video -->
+        <div class="contenedores">
+            <!-- Contenedor del video -->
+
+            <div class="video-container">
+                <!-- Video automatico-->
+                <video id="video" autoplay muted loop>
+                    <!-- Archivo del video -->
+                    <source src="assets/images/dulceria/video de paleta de chocolate.mp4" type="video/mp4">
+
+                </video>
+            </div>
+            <!-- Panel -->
+            <div class="panel">
+
+                <!-- Logo-->
+                <div class="logo">
+                    <img src="assets/images/dulceria/logoo.png" alt="Logo ADSO">
+                </div>
+                <!-- Botones de categorias -->
+                <div>
+                    <button class="btn-producto">Paleta helada</button>
+                    <button class="btn-producto">Bombones</button>
+                    <button class="btn-producto">Gomitas</button>
+
+
+                </div>
+                <div>
+                    <!-- controles del video -->
+                    <div class="controles">
+                        <button onclick="playVideo">▶</button>
+                        <button onclick="pauseVideo">⏸</button>
+                        <button onclick="stopVideo">⏹</button>
+                        <button onclick="reiniciarVideo">⏻</button>
+                    </div>
+
+
+                </div>
+            </div>
+    </section>
+
 </body>
 
 </html>

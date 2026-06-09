@@ -1,60 +1,71 @@
+/* Reinicia los estilos predeterminados del navedador */
 * {
     margin: 0;
     padding: 0;
+    /* Incluye padding y border dentro del tamaño total */
     box-sizing: border-box;
-    font-family: 'Mplus 1p Bold', sans-serif;
+    
 }
-
+/* color de fondo general de la pagina */
+body {
+    background-color: #010101;
+}
+/* encabezado principal */
 header {
+    /* Organiza los elementos en fila */
     display: flex;
+    /* Separa logo y menú */
     justify-content: space-between;
+    /* Centra verticalmente */
     align-items: center;
     padding: 20px;
     background-color: #010101;
-   border: 4px solid #c6c12f;
+   border: 2px solid #c6c12f;
 }
-
+/* contenedor del logo */
 .logo {
     width: 160px;
     height: 100px;
 }
-
+/* Imagen del logo */
 .logo img {
-    width: 100%;
+    width: 80%;
     height: 100%;
 }
-
+/* menú de navegación */
 .nav-links {
     display: flex;
+    /* Espacio entre elementos */
     gap: 20px;
     align-items: center;
     margin:0;
     padding:0;
 }
-
+/* Quita el subrayado de los enlaces */
 .nav-item a{
     text-decoration: none;
 }
 
 .nav-item {
     display: flex;
+    /* Icono arriba y texto abajo */
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 10px;
 }
-
+/* Tamaño de los iconos SVG */
 .nav-item svg {
     width: 48px;
     height: 48px;
 }
-
+/* Estilo del menú */
 nav .nav-item a {
     color: #c6c12f;
     font-size: 20px;
     font-weight: 500;
 }
-
+/* Sección principal con imagen de fondo */
 .main-content {
     background-image: url('../assets/images/fondo_1.svg');
     background-size: cover;
@@ -65,13 +76,13 @@ nav .nav-item a {
     flex-direction: column;
     justify-content: space-between;
 }
-
+/* Botones ubicados en la parte superior izquierda */
 .izquierda-superior {
     display: flex;
     gap: 20px;
     flex-direction: column;
 }
-
+/* Estilo de los en*/
 .izquierda-superior a {
     color: #c6c12f;
     font-size: 24px;
@@ -83,7 +94,7 @@ nav .nav-item a {
     width: 300px;
     text-align: center;
 }
-
+/* Redes */
 .derecha-inferior {
     display: flex;
     gap: 20px;
@@ -91,7 +102,7 @@ nav .nav-item a {
     flex-direction: row;
     justify-content: flex-end;
 }
-
+/* Botones de redes sociales */
 .derecha-inferior a {
     color: #fff;
     background-color: #1a1a1a;
@@ -99,106 +110,235 @@ nav .nav-item a {
     border: 4px solid #4A4A48;
     border-radius: 99px;
 }
-
+/* Tamaño de los iconos de redes sociales */
 .derecha-inferior a img {
     width: 26px;
     height: 26px;
 }
-
+/* Contenedor de acciones */
 .acciones {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 20px;
-    padding: 15px;
-    margin-top: -40px;
+    padding: 20px;
+    margin-top: -72px;
 }
-
+/* Botones de acciones  */
 .acciones a {
-     text-decoration: none;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
     background-color: #2f2f2f;
     color: white;
     font-size: 20px;
     font-family: Arial, sans-serif;
-    padding: 15px 80px;
+    width: 240px;
+    padding: 20px 0;
     border-radius: 10px;
     text-align: center;
+    white-space: nowrap;
     transition: 0.3s;
 }
-
+/* Efecto al pasar el mouse */
 .acciones a:hover {
     background-color: #444;
 }
-
-.card {
+/* Sección de productos */
+.productos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    margin: 20px;
     background-color: #fff;
-    border: 4px solid #c6c12f;
-    border-radius: 10px;
     padding: 20px;
-    text-align: center;
-    width: 300px;
+}
+/* Filas de tarjetas */
+.filas{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
 }
 
-.btn-productos {
-    background-color: #c6c12f;
-    color: #010101;
+/* Tarjeta individual */
+.card{
+    background-color: #fff;
+    border: 4px solid #056F87;
+    border-radius: 10px;
+    padding: 20px;
+    width: 317px;
+    min-height: 388px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+/* Imagen del produnto */
+.card img{
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    margin: 0 auto;
+}
+
+/* Contenido interno */
+.content{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex-grow: 1;
+}
+/* Texto del producto */
+.text{
+    text-align: left;
+}
+
+.content .text{
     font-size: 18px;
-    font-weight: 500;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    color: #1a1a1a;
+    font-weight: 400;
+}
+
+/* Boton añadir al carrito */
+.btn-productos{
+    margin-top: auto; 
+
     width: 100%;
-    background: black;
+    background-color: #000;
     color: gold;
     border: 3px solid gold;
     border-radius: 30px;
     padding: 12px;
     font-size: 18px;
     cursor: pointer;
+    transition: 0.3s;
+}
+/* Hover del boton */
+.btn-productos:hover{
+    background-color: #222;
+}
+/* Contenedor de categorías */
+.contenedor{
+    margin: 0;
+    padding: 0;
+    background-color: #222020;
 }
 
-.btn-carrito:hover{
-    background: #222;
+/* Ancho y centrado*/
+.contenedor{
+    width: 95%;
+    margin: 20px auto;
+    
 }
-
-.productos {
+/* Menú de categorías */
+.menu-categorias{
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 20px;
-    gap: 60px
+}
+/* Opciones del menú de categorías */
+.menu-categorias a{
+    flex: 1;
+    text-align: center;
+    text-decoration: none;
+    color: #111;
+    font-size: 22px;
+    padding: 15px 0;
+
+    background: linear-gradient(
+        to right,
+        #b87a09,
+        #f3d17a,
+        #b87a09
+    );
+
+    border: 2px solid #9c6a08;
+}
+/* Bordes redondeados extremos*/
+.menu-categorias a:first-child{
+    border-radius: 12px 0 0 12px;
 }
 
-.filas {
-    display: flex;
-    flex-direction: row;
-    gap: 60px;
+.menu-categorias a:last-child{
+    border-radius: 0 12px 12px 0;
+}
+/* Hover de categorias */
+.menu-categorias a:hover{
+    filter: brightness(1.1);
 }
 
-.card {
-    display: flex;
-    flex-direction: column;
-    gap: 60px;
+/* Botones del contro del video*/
+.controles button{
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    border:2px solid #666;
+    background:#111;
+    color:rgb(116, 109, 109);
+    font-size:20px;
+    cursor:pointer;
+}
+/* Hover controles */
+.controles button:hover{
+    background:#333;
+}
+/* Hover categorias de panel */
+.btn-producto:hover{
+    background:#333;
+}
+/* Contenedor de  controles */
+.controles{
+    margin-top:auto;
+    display:flex;
+    gap:10px;
+}
+/* Logo dentro del panel */
+.logo img{
+    width:180px;
+    margin-bottom:20px;
+}
+/* Botones del panel lateral */
+.btn-producto{
+    width:100%;
+    height:50px;
+    margin-bottom:15px;
+    background:transparent;
+    color:#bdbdbd;
+    border:2px solid #666;
+    border-radius:8px;
+    font-size:18px;
+    cursor:pointer;
+    
+}
+/* Contenedor del  video */
+.video-container{
+    width:75%;
+    height:100%;
+}
+/* Video */
+.video-container video{
+    width:120%;
+    height:100%;
+    object-fit:cover;
+}
+/* Panel lateral*/
+.panel{
+    width:25%;
+    background:#1f2024;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    padding:30px;
+}
+/* Contenedor general del video mas panel */
+.contenedores{
+    display:flex;
+    flex-wrap:wrap;
 }
 
-.text {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: start;
+.contenedores{
+    width:48%;
+    margin:10px;
 }
 
-.content {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.content .text {
-    font-size: 18px;
-    color: #1a1a1a;
-    font-weight: 400;
-}
