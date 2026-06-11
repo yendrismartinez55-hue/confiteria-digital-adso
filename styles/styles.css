@@ -350,7 +350,7 @@ nav .nav-item a {
 /* Botones del panel lateral */
 .btn-paleta{
     width:100%;
-    height:50px;
+    height:60px;
     margin-bottom:15px;
     background:transparent;
     color:#bdbdbd;
@@ -361,7 +361,7 @@ nav .nav-item a {
 }
 .btn-bombones{
     width:100%;
-    height:50px;
+    height:60px;
     margin-bottom:15px;
     background:transparent;
     color:#bdbdbd;
@@ -371,7 +371,7 @@ nav .nav-item a {
 }
 .btn-gomitas{
     width:100%;
-    height:50px;
+    height:60px;
     margin-bottom:15px;
     background:transparent;
     color:#bdbdbd;
@@ -673,157 +673,386 @@ section:has(.video-container){
     line-height: 1.2;
     font-family: 'Inria Sans', sans-serif;
 }
-/* TABLETS */
+/*estilos responsivos para pantallas pequeñas*/
 @media (max-width: 1024px) {
-
-    .nav-links {
-        gap: 10px;
+    /* Liberar ancho en cabecera */
+    header {
+        padding: 0 20px;
+    }
+    
+    .derecha {
+        gap: 15px;
+    }
+    
+    nav ul {
+        gap: 15px;
+    }
+    
+    .sesion, .registro {
+        padding: 8px 12px;
+        font-size: 15px;
     }
 
-    .nav-item {
-        min-width: 90px;
+    /* Liberar ancho en vitrina */
+    .vitrina-productos {
+        padding: 20px 15px;
+        gap: 15px;
     }
 
-    nav .nav-item a {
-        font-size: 16px;
+    /* Reducir aside para dar más espacio a productos */
+    .filtrado {
+        flex: 0 0 156px;
+        min-width: 240px;
+        max-width: 240px;
+        padding: 16px;
     }
 
-    .izquierda-superior a {
-        width: 350px;
-        font-size: 20px;
-        margin-left: -300px;
-
+    /* Productos en dos columnas */
+    .productos {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
     }
 
-    .menu-categorias {
-        width: 100%;
-        flex-wrap: wrap;
+    /* Ajustar tamaño de tarjetas e imágenes */
+    .card {
+        padding: 15px;
     }
 
-    .video-container video {
-        height: 400px;
+    .imgs {
+        height: 130px;
     }
 
-    .panel {
-        flex: 0 0 280px;
+    .card-img,
+    .card-img-left,
+    .card-img-right {
+        height: 130px !important;
     }
 
-    .quienes-somos-container {
-        flex-direction: column;
+    /* Ajustar miniaturas de video */
+    .videos-producto {
+        padding: 20px 15px;
+    }
+
+    .imagenes-de-video {
+        padding: 20px 15px;
+        gap: 12px;
+    }
+
+    .imagenes-de-video label {
+        max-width: 220px;
+    }
+
+    .imagenes-de-video label img {
+        height: 120px;
+    }
+
+    /* Footer adaptado */
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
         text-align: center;
     }
-
-    .quienes-somos-container > img {
-        width: 350px;
-        margin-top: 0;
+    
+    .footer-column {
+        align-items: center;
     }
-
-    .adso-footer {
-        flex-direction: column;
-        height: auto;
-        gap: 30px;
-        padding: 30px;
+    
+    .footer-map {
+        grid-column: span 1;
     }
-}
-
-/* CELULARES */
-@media (max-width: 768px) {
-
-    header {
-        flex-direction: column;
-        gap: 20px;
+    
+    .footer-info {
+        grid-column: span 1;
+        margin-left: 0;
+        align-items: center;
     }
-
-    .logo {
-        width: 180px;
-        height: auto;
-    }
-
-    .nav-links {
-        flex-wrap: wrap;
+    
+    .footer-socials {
         justify-content: center;
     }
+}
 
-    .nav-item svg {
-        width: 35px;
-        height: 35px;
+@media (max-width: 768px) {
+    header {
+        height: auto;
+        padding: 15px 20px;
+        flex-wrap: nowrap;
+        justify-content: space-between;
     }
-
-    nav .nav-item a {
-        font-size: 14px;
+    
+    .header-left {
+        width: auto;
     }
-
-    .izquierda-superior {
-        align-items: center;
-        margin-left: 0;
+    
+    .header-left hr {
+        display: none;
     }
-
-    .izquierda-superior a {
-        width: 90%;
-        max-width: 300px;
-        font-size: 18px;
+    
+    .logo {
+        width: 100px;
+        height: 50px;
     }
-
-    .derecha-inferior {
-        justify-content: row;
-        margin: 20px 0;
-        margin-top: 500px;
+    
+    .desktop-only {
+        display: none !important;
     }
-
-    .acciones a {
-        width: 50%;
-        font-size: 16px;
+    
+    .mobile-only {
+        display: block !important;
     }
-
-    .card {
-        width: 90%;
-        max-width: 320px;
-    }
-
-    .menu-categorias {
+    
+    .menu-toggle {
+        display: flex;
         flex-direction: column;
+        justify-content: space-between;
+        width: 26px;
+        height: 18px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+        z-index: 1001;
+    }
+    
+    .menu-toggle .bar {
+        width: 100%;
+        height: 3px;
+        background-color: #1a1a1a;
+        border-radius: 2px;
+        transition: all 0.3s ease;
+    }
+    
+    /* Animación del botón hamburguesa usando el checkbox hack */
+    .menu-toggle-checkbox:checked ~ .header-right .menu-toggle .bar:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+    }
+    
+    .menu-toggle-checkbox:checked ~ .header-right .menu-toggle .bar:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .menu-toggle-checkbox:checked ~ .header-right .menu-toggle .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    
+    /* Menú de navegación desplegable móvil */
+    .navegacion {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: #ffffff;
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.05);
+        display: none;
+        padding: 20px;
+        z-index: 1000;
+        border-top: 1px solid #eee;
+    }
+    
+    /* Mostrar navegación desplegable al marcar el checkbox */
+    .menu-toggle-checkbox:checked ~ .header-left .navegacion {
+        display: block !important;
+        animation: slideDown 0.3s ease forwards;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 15px;
         width: 100%;
     }
-
-    section:has(.video-container) {
-        flex-direction: column;
-    }
-
-    .panel {
+    
+    nav ul li {
         width: 100%;
-        flex: none;
-    }
-
-    .video-container video {
-        height: 250px;
-    }
-
-    .text {
-        font-size: 16px;
-    }
-
-    .boton button {
-        width: 200px;
-        height: 60px;
-        font-size: 24px;
-    }
-
-    .footer-logo,
-    .location-icon {
-        margin-left: 0;
-    }
-
-    .logo-text,
-    .location-info-text,
-    .phone-item {
-        margin-left: 0;
         text-align: center;
+        padding: 0;
+    }
+    
+    nav ul li a {
+        display: block;
+        padding: 8px;
+        font-size: 18px;
+        width: 100%;
+    }
+    
+    .mobile-only .sesion {
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        padding: 10px;
+        justify-content: center;
+        margin-top: 10px;
+    }
+    
+    .mobile-only .registro {
+        background: #F93827;
+        color: white !important;
+        border-radius: 5px;
+        padding: 10px;
+        justify-content: center;
+        margin-top: 10px;
+    }
+    
+    /* Categorías */
+    .btn-categoria {
+        font-size: 20px;
+        padding: 12px 10px;
+    }
+
+    /* Vitrina y Filtros */
+    .vitrina-productos {
+        flex-direction: column;
+        padding: 15px;
+    }
+    
+    .filtrado {
+        width: 100%;
+        max-width: 100%;
+        min-width: 100%;
+        border: none;
+        box-shadow: none;
+        background-color: transparent;
+        padding: 10px 0;
+    }
+    
+    /* Filtros Colapsables usando el checkbox hack */
+    .seccion-filtro .filter-content {
+        display: none;
+    }
+    
+    .seccion-filtro .icono-flecha {
+        display: inline-block;
+        transform: rotate(-90deg);
+        transition: transform 0.3s ease;
+    }
+    
+    /* Expandir contenido al marcar el checkbox */
+    .filter-checkbox:checked ~ .filter-content {
+        display: block !important;
+    }
+    
+    /* Rotar la flecha al marcar el checkbox */
+    .filter-checkbox:checked ~ .encabezado-filtro .icono-flecha {
+        transform: rotate(0deg);
+    }
+    
+    .linea-divisoria {
+        margin: 10px 0;
+    }
+    
+    /* Contenedor de Videos */
+    .imagenes-de-video {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        gap: 15px;
+    }
+    
+    .imagenes-de-video label {
+        width: 100%;
+        max-width: 400px;
+    }
+    
+    .imagenes-de-video label img {
+        width: 100%;
+        max-width: 100%;
+        height: 180px;
+    }
+    
+    /* Lista de Productos */
+    .product-container {
+        margin: 20px auto;
+        padding: 16px;
+        border-radius: var(--radius-md);
+        box-shadow: none;
+        border-left: none;
+        border-right: none;
+    }
+
+    .product-item {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 16px 8px;
+        gap: 12px;
+        text-align: left;
+    }
+    
+    .product-item:hover {
+        padding-left: 8px;
+        padding-right: 8px;
+        background: transparent;
+    }
+    
+    .product-img {
+        width: 70px;
+        height: 70px;
+        margin-right: 10px;
+        padding: 6px;
+    }
+    
+    .product-details {
+        flex: 1;
+        min-width: 0;
+    }
+    
+    .product-title {
+        font-size: 0.95rem;
+        font-weight: 700;
+        margin-bottom: 2px;
+    }
+    
+    .product-info {
+        font-size: 0.8rem;
+        margin-bottom: 1px;
+    }
+    
+    .product-actions {
+        height: auto;
+        align-items: flex-end;
+        justify-content: center;
+        gap: 6px;
+    }
+    
+    .product-price {
+        font-size: 1.05rem;
+    }
+    
+    .btn-buy {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+        gap: 4px;
+    }
+    
+    .btn-buy:hover {
+        transform: none;
+    }
+    
+    .btn-buy:hover .arrow {
+        transform: none;
+    }
+    
+    .main-footer {
+        padding: 40px 20px 20px 20px;
+    }
+    
+    .footer-map img {
+        height: 200px;
     }
 }
-    
 
-  
-    
+@media (max-width: 480px) {
+    .productos {
+        grid-template-columns: 1fr;
+    }
+}
 
-
-
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
