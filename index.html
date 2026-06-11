@@ -64,25 +64,34 @@
     </header>
     <!-- Esta sección de los enlaces de navegación entre dulceria y regalos -->
     <section class="main-content">
+
+        <!-- Slider -->
+        <div class="slider-wrapper">
+            <img src="assets/banner1.png" class="slide active" alt="Slide 1">
+            <img src="assets/banner2.png" class="slide" alt="Slide 2">
+            <img src="assets/banner3.png" class="slide" alt="Slide 3">
+        </div>
+
         <div class="izquierda-superior">
             <a href="#">Confitería</a>
             <a href="#">Regalos</a>
         </div>
-        <!-- Redes socilaes-->
+
         <div class="derecha-inferior">
             <a href="#" class="whatsapp">
                 <img src="assets/images/whatsapp.png" alt="WhatsApp">
             </a>
             <a href="#">
-                <img src="assets/images/twitter.png" alt="twitter">
+                <img src="assets/images/twitter.png" alt="Twitter">
             </a>
             <a href="#">
-                <img src="assets/images/facebook.png" alt="facebook">
+                <img src="assets/images/facebook.png" alt="Facebook">
             </a>
             <a href="#">
-                <img src="assets/images/instagram.png" alt="instagram">
+                <img src="assets/images/instagram.png" alt="Instagram">
             </a>
         </div>
+
     </section>
     
     <!-- sección de productos -->
@@ -189,7 +198,7 @@
         </div>
     </section>
     <!-- Menu de filtros -->
-    <section>
+    
         <!-- Categorias para filtrar productos  -->
         <div class="contenedor">
             <nav class="menu-categorias">
@@ -199,16 +208,13 @@
                 <a href="#">Novedades</a>
             </nav>
         </div>
-    </section>
+
+    </div>
 
     <section>
-        <!-- sección del video -->
-        <div class="contenedores">
-            <!-- Contenedor del video -->
-
             <div class="video-container">
                 <!-- Video automatico-->
-                <video id="video" autoplay muted loop>
+                <video controls muted loop>
                     <!-- Archivo del video -->
                     <source src="assets/images/dulceria/video de paleta de chocolate.mp4" type="video/mp4">
 
@@ -222,10 +228,10 @@
                     <img src="assets/images/dulceria/logoo.png" alt="Logo ADSO">
                 </div>
                 <!-- Botones de categorias -->
-                <div>
-                    <button class="btn-producto">Paleta helada</button>
-                    <button class="btn-producto">Bombones</button>
-                    <button class="btn-producto">Gomitas</button>
+                <div class="categorias">
+                    <button class="btn-paleta">Paleta helada</button>
+                    <button class="btn-bombones">Bombones</button>
+                    <button class="btn-gomitas">Gomitas</button>
 
 
                 </div>
@@ -237,12 +243,100 @@
                         <button onclick="stopVideo">⏹</button>
                         <button onclick="reiniciarVideo">⏻</button>
                     </div>
-
-
                 </div>
             </div>
     </section>
+    <section class="banner">
+    <img src="assets/images/dulceria/Preferencial.png" alt="Banner principal">
+</section>
 
+<section>
+    <div class="quienes-somos-container">
+        <img src="assets/images/mujer.png" alt="Banner principal">
+        <div class="quienes-somos">
+            <img src="assets/images/dulceria/quienes somos.png" alt="Banner principal">
+            <div class="text">
+            <p>
+            <pre>
+            Somos ADSO, una dulcería y tienda de regalos 
+            dedicada a crear momentos especiales a través 
+            de detalles únicos y llenos de dulzura. Nos 
+            caracterizamos por nuestra creatividad, dedicación
+            y pasión por sorprender a nuestros clientes con 
+            productos de calidad y presentaciones innovadoras.
+            </pre>
+            </p>
+            
+            <div class="boton">
+            <button class="btn-producto">Ver más</button>
+            </div>
+    </div>
+        </div>
+            </div>
+</section>
+<section class="banner2">
+    <img src="assets/images/banner3.png" alt="Banner principal">
+</section>
+
+<section class="adso-footer">
+        <div class="footer-logo-section">
+            <img src="assets/logo final.png" alt="Logo Adso" class="footer-logo">
+            <div class="logo-text">
+                Dulcera y tienda<br>
+                de regalos dedicada<br>
+                a crear momentos especiales
+            </div>
+        </div>
+
+        <div class="footer-links">
+            <a href="#" class="footer-link-text">Dulceria y regalos</a>
+            <a href="#" class="footer-link-text link-bold">Preferenciales</a>
+            <a href="#" class="footer-link-text">Pedidos</a>
+            
+            <div class="footer-socials">
+                <a href="#" class="whatsapp">
+                <img src="assets/images/whatsapp.png" alt="WhatsApp">
+            </a>
+            <a href="#">
+                <img src="assets/images/twitter.png" alt="twitter">
+            </a>
+            <a href="#">
+                <img src="assets/images/facebook.png" alt="facebook">
+            </a>
+            <a href="#">
+                <img src="assets/images/instagram.png" alt="instagram">
+            </a>
+            </div>
+        </div>
+
+        <div class="footer-info-section">
+            <div class="info-item">
+                <img src="assets/icono casa.png" alt="Ubicación" class="location-icon">
+                <div class="location-info-text">
+                    <span class="info-title">Ubicado en la plaza</span>
+                    <span class="info-text">de bolívar</span>
+                    <span class="info-text">Genova-Quindio</span>
+                </div>
+            </div>
+
+            <div class="phone-item">
+                <img src="assets/iconowhat.png" alt="Teléfono" class="phone-icon">
+                <span class="info-text">+57 3247894532</span>
+            </div>
+        </div>
+    </section>
+
+<script>
+const slides = document.querySelectorAll('.slide');
+let current = 0;
+
+setInterval(() => {
+    slides[current].classList.remove('active');
+    current = (current + 1) % slides.length;
+    slides[current].classList.add('active');
+}, 3000);
+</script>
+</body>
 </body>
 
 </html>
