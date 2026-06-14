@@ -19,8 +19,15 @@
         <div class="logo">
             <img src="./assets/logo final.png" alt="logo">
         </div>
+        <!-- Botón de menú hamburguesa (visible en móviles) -->
+        <button class="menu-btn" id="menu-btn" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="nav-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+
         <!-- Menú de navegación -->
-        <nav>
+        <nav id="nav-menu">
             <ul class="nav-links">
                 <!-- Opciones de rergistro -->
                 <li class="nav-item active">
@@ -65,35 +72,37 @@
     <!-- Esta sección de los enlaces de navegación entre dulceria y regalos -->
     <section class="main-content">
 
-        <!-- Slider -->
-        <div class="slider-wrapper">
-            <img src="assets/banner1.png" class="slide active" alt="Slide 1">
-            <img src="assets/banner2.png" class="slide" alt="Slide 2">
-            <img src="assets/banner3.png" class="slide" alt="Slide 3">
-        </div>
-
-        <div class="izquierda-superior">
+        <!-- Enlaces principales de navegación -->
+        <nav class="izquierda-superior" aria-label="Categorías principales">
             <a href="#">Confitería</a>
             <a href="#">Regalos</a>
-        </div>
+        </nav>
 
-        <div class="derecha-inferior">
-            <a href="#" class="whatsapp">
+        <!-- Redes sociales de contacto -->
+        <div class="derecha-inferior" role="region" aria-label="Redes sociales">
+            <a href="#" class="whatsapp" aria-label="WhatsApp">
                 <img src="assets/images/whatsapp.png" alt="WhatsApp">
             </a>
-            <a href="#">
+            <a href="#" aria-label="Twitter">
                 <img src="assets/images/twitter.png" alt="Twitter">
             </a>
-            <a href="#">
+            <a href="#" aria-label="Facebook">
                 <img src="assets/images/facebook.png" alt="Facebook">
             </a>
-            <a href="#">
+            <a href="#" aria-label="Instagram">
                 <img src="assets/images/instagram.png" alt="Instagram">
             </a>
         </div>
 
+        <!-- Slider de fondo (oculto para accesibilidad al ser meramente decorativo) -->
+        <div class="slider-wrapper" aria-hidden="true">
+            <img src="assets/banerr.png" class="slide active" alt="" role="presentation">
+            <img src="assets/banerr2.png" class="slide" alt="" role="presentation">
+            <img src="assets/bannerrr3.png" class="slide" alt="" role="presentation">
+        </div>
+
     </section>
-    
+
     <!-- sección de productos -->
     <section class="productos">
         <!-- Botones de acceso rapido -->
@@ -167,7 +176,7 @@
                 <div class="content">
                     <img src="./assets/images/dulceria/Coffe.png" alt="Productos de la confiteria digital">
                     <div class="text">
-                        <p>Dulces Coffee Delight </p>
+                        <p>Dulces Coffee Delight</p>
                         <p>$ 3.300</p>
                     </div>
                 </div>
@@ -178,7 +187,7 @@
                 <div class="content">
                     <img src="./assets/images/dulceria/Jumbo.png" alt="Productos de la confiteria digital">
                     <div class="text">
-                        <p>Chocolates Jumbo MiX  </p>
+                        <p>Chocolates Jumbo MiX</p>
                         <p>$ 3.500</p>
                     </div>
                 </div>
@@ -189,7 +198,7 @@
                 <div class="content">
                     <img src="./assets/images/dulceria/Felicidades.png" alt="Productos de la confiteria digital">
                     <div class="text">
-                        <p>Chocolates Triunfo Rellenos  </p>
+                        <p>Chocolates Triunfo Rellenos</p>
                         <p>$ 22.900</p>
                     </div>
                 </div>
@@ -198,145 +207,146 @@
         </div>
     </section>
     <!-- Menu de filtros -->
-    
-        <!-- Categorias para filtrar productos  -->
-        <div class="contenedor">
-            <nav class="menu-categorias">
-                <a href="#">Marca</a>
-                <a href="#">Tipo</a>
-                <a href="#">Precio</a>
-                <a href="#">Novedades</a>
-            </nav>
-        </div>
+
+    <!-- Categorias para filtrar productos  -->
+    <div class="contenedor">
+        <nav class="menu-categorias">
+            <a href="#">Marca</a>
+            <a href="#">Tipo</a>
+            <a href="#">Precio</a>
+            <a href="#">Novedades</a>
+        </nav>
+    </div>
 
     </div>
 
     <section>
-            <div class="video-container">
-                <!-- Video automatico-->
-                <video controls muted loop>
-                    <!-- Archivo del video -->
-                    <source src="assets/images/dulceria/video de paleta de chocolate.mp4" type="video/mp4">
+        <div class="video-container">
+            <!-- Video automatico-->
+            <video controls muted loop>
+                <!-- Archivo del video -->
+                <source src="assets/images/dulceria/video de paleta de chocolate.mp4" type="video/mp4">
 
-                </video>
+            </video>
+        </div>
+        <!-- Panel -->
+        <div class="panel">
+
+            <!-- Logo-->
+            <div class="logo">
+                <img src="assets/logo final.png" alt="Logo ADSO">
             </div>
-            <!-- Panel -->
-            <div class="panel">
-
-                <!-- Logo-->
-                <div class="logo">
-                    <img src="assets/images/dulceria/logoo.png" alt="Logo ADSO">
-                </div>
-                <!-- Botones de categorias -->
-                <div class="categorias">
-                    <button class="btn-paleta">Paleta helada</button>
-                    <button class="btn-bombones">Bombones</button>
-                    <button class="btn-gomitas">Gomitas</button>
+            <!-- Botones de categorias -->
+            <div class="categorias">
+                <button class="btn-paleta">Paleta helada</button>
+                <button class="btn-bombones">Bombones</button>
+                <button class="btn-gomitas">Gomitas</button>
 
 
-                </div>
-                <div>
-                    <!-- controles del video -->
-                    <div class="controles">
-                        <button onclick="playVideo">▶</button>
-                        <button onclick="pauseVideo">⏸</button>
-                        <button onclick="stopVideo">⏹</button>
-                        <button onclick="reiniciarVideo">⏻</button>
+            </div>
+            <div class="controles">
+                <button onclick="playVideo">▶</button>
+                <button onclick="pauseVideo">⏸</button>
+                <button onclick="stopVideo">⏹</button>
+                <button onclick="reiniciarVideo">⏻</button>
+            </div>
+        </div>
+    </section>
+    <section class="banner">
+        <img src="assets/preferencial2.png" alt="Banner de Clientes Preferenciales ADSO">
+    </section>
+
+    <section>
+        <div class="quienes-somos-container">
+            <img src="assets/images/mujer.png" alt="Mujer sonriendo con empaque de regalo de la dulcería">
+            <div class="quienes-somos">
+                <img src="assets/images/dulceria/quienes somos.png" alt="Título Quiénes Somos">
+                <div class="text">
+                    <p class="quienes-somos-desc">
+                        Somos ADSO, una dulcería y tienda de regalos dedicada a crear momentos especiales a través de detalles únicos y llenos de dulzura. Nos caracterizamos por nuestra creatividad, dedicación y pasión por sorprender a nuestros clientes con productos de calidad y presentaciones innovadoras.
+                    </p>
+
+                    <div class="boton">
+                        <button class="btn-producto">Ver más</button>
                     </div>
                 </div>
             </div>
-    </section>
-    <section class="banner">
-    <img src="assets/images/dulceria/Preferencial.png" alt="Banner principal">
-</section>
-
-<section>
-    <div class="quienes-somos-container">
-        <img src="assets/images/mujer.png" alt="Banner principal">
-        <div class="quienes-somos">
-            <img src="assets/images/dulceria/quienes somos.png" alt="Banner principal">
-            <div class="text">
-            <p>
-            <pre>
-            Somos ADSO, una dulcería y tienda de regalos 
-            dedicada a crear momentos especiales a través 
-            de detalles únicos y llenos de dulzura. Nos 
-            caracterizamos por nuestra creatividad, dedicación
-            y pasión por sorprender a nuestros clientes con 
-            productos de calidad y presentaciones innovadoras.
-            </pre>
-            </p>
-            
-            <div class="boton">
-            <button class="btn-producto">Ver más</button>
-            </div>
-    </div>
         </div>
-            </div>
-</section>
-<section class="banner2">
-    <img src="assets/images/banner3.png" alt="Banner principal">
-</section>
+    </section>
+    <section class="banner2">
+        <img src="assets/arreglado.png" alt="Banner promocional con variedad de dulces y postres ADSO">
+    </section>
 
-<section class="adso-footer">
+    <footer class="adso-footer">
         <div class="footer-logo-section">
-            <img src="assets/logo final.png" alt="Logo Adso" class="footer-logo">
+            <img src="assets/logo final.png" alt="Logo de Dulcería y Tienda de Regalos ADSO" class="footer-logo">
             <div class="logo-text">
-                Dulcera y tienda<br>
+                Dulcería y tienda<br>
                 de regalos dedicada<br>
                 a crear momentos especiales
             </div>
         </div>
 
         <div class="footer-links">
-            <a href="#" class="footer-link-text">Dulceria y regalos</a>
+            <a href="#" class="footer-link-text">Dulcería y regalos</a>
             <a href="#" class="footer-link-text link-bold">Preferenciales</a>
             <a href="#" class="footer-link-text">Pedidos</a>
-            
+
             <div class="footer-socials">
-                <a href="#" class="whatsapp">
-                <img src="assets/images/whatsapp.png" alt="WhatsApp">
-            </a>
-            <a href="#">
-                <img src="assets/images/twitter.png" alt="twitter">
-            </a>
-            <a href="#">
-                <img src="assets/images/facebook.png" alt="facebook">
-            </a>
-            <a href="#">
-                <img src="assets/images/instagram.png" alt="instagram">
-            </a>
+                <a href="#" class="whatsapp" aria-label="Enviar mensaje por WhatsApp">
+                    <img src="assets/images/whatsapp.png" alt="WhatsApp">
+                </a>
+                <a href="#" aria-label="Síguenos en Twitter">
+                    <img src="assets/images/twitter.png" alt="Twitter">
+                </a>
+                <a href="#" aria-label="Síguenos en Facebook">
+                    <img src="assets/images/facebook.png" alt="Facebook">
+                </a>
+                <a href="#" aria-label="Síguenos en Instagram">
+                    <img src="assets/images/instagram.png" alt="Instagram">
+                </a>
             </div>
         </div>
 
         <div class="footer-info-section">
             <div class="info-item">
-                <img src="assets/icono casa.png" alt="Ubicación" class="location-icon">
+                <img src="assets/icono casa.png" alt="Icono de ubicación" class="location-icon">
                 <div class="location-info-text">
                     <span class="info-title">Ubicado en la plaza</span>
-                    <span class="info-text">de bolívar</span>
-                    <span class="info-text">Genova-Quindio</span>
+                    <span class="info-text">de Bolívar</span>
+                    <span class="info-text">Génova - Quindío</span>
                 </div>
             </div>
 
             <div class="phone-item">
-                <img src="assets/iconowhat.png" alt="Teléfono" class="phone-icon">
+                <img src="assets/iconowhat.png" alt="Icono de teléfono" class="phone-icon">
                 <span class="info-text">+57 3247894532</span>
             </div>
         </div>
-    </section>
+    </footer>
 
-<script>
-const slides = document.querySelectorAll('.slide');
-let current = 0;
+    <script>
+        // Control del Slider de banners
+        const slides = document.querySelectorAll('.slide');
+        let current = 0;
 
-setInterval(() => {
-    slides[current].classList.remove('active');
-    current = (current + 1) % slides.length;
-    slides[current].classList.add('active');
-}, 3000);
-</script>
+        setInterval(() => {
+            slides[current].classList.remove('active');
+            current = (current + 1) % slides.length;
+            slides[current].classList.add('active');
+        }, 3000);
+
+        // Control del Menú Hamburguesa para Móviles
+        const menuBtn = document.getElementById('menu-btn');
+        const navMenu = document.getElementById('nav-menu');
+
+        if (menuBtn && navMenu) {
+            menuBtn.addEventListener('click', () => {
+                const isOpen = menuBtn.classList.toggle('open');
+                navMenu.classList.toggle('open');
+                menuBtn.setAttribute('aria-expanded', isOpen);
+            });
+        }
+    </script>
 </body>
-</body>
-
 </html>
