@@ -1,0 +1,179 @@
+* Reinicia los estilos predeterminados del navedador */
+* {
+    margin: 0;
+    padding: 0;
+    /* Incluye padding y border dentro del tamaño total */
+    box-sizing: border-box;
+
+}
+
+
+/* encabezado principal */
+header {
+    /* Organiza los elementos en fila */
+    display: flex;
+    /* Separa logo y menú */
+    justify-content: space-between;
+    /* Centra verticalmente */
+    align-items: center;
+    padding: 20px;
+    background-color: #010101;
+    border: 4px solid #c6c12f;
+}
+
+/* Botón de menú hamburguesa - oculto por defecto en desktop */
+.menu-btn {
+    display: none;
+}
+
+/* contenedor del logo */
+.logo {
+    width: 220px;
+    height: 125px;
+}
+
+/* Imagen del logo */
+.logo img {
+    width: 80%;
+    height: 100%;
+}
+
+/* menú de navegación */
+.nav-links {
+    display: flex;
+    /* Espacio entre elementos */
+    gap: 20px;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Quita el subrayado de los enlaces */
+.nav-item a {
+    text-decoration: none;
+}
+
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    min-width: 120px;
+    text-align: center;
+}
+
+/* Tamaño de los iconos SVG */
+.nav-item svg {
+    width: 60px;
+    height: 60px;
+}
+
+/* Estilo del menú */
+nav .nav-item a {
+    color: #c6c12f;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: 'Inter', sans-serif;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+/* Sección principal con imagen de fondo */
+.main-content {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Slider */
+.slider-wrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 2s ease;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+/* Contenido encima del slider */
+.izquierda-superior,
+.derecha-inferior {
+    position: relative;
+    z-index: 1;
+}
+
+/* Botones ubicados en la parte superior izquierda */
+.izquierda-superior {
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+    margin-top: 40px;
+    margin-left: 20px;
+}
+
+/* Estilo de los en*/
+.izquierda-superior a {
+    color: #c6c12f;
+    font-size: 24px;
+    font-weight: 900;
+    font-family: 'Mplus 1p Bold', sans-serif;
+    text-decoration: none;
+    border: 4px solid #c6c12f;
+    border-radius: 8px;
+    padding: 10px 40px;
+    width: 410px;
+    height: 40px;
+    text-align: center;
+}
+
+/* Redes */
+.derecha-inferior {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-top: 540px;
+    margin-left: 100px;
+
+
+}
+
+/* Botones de redes sociales */
+.derecha-inferior a {
+    color: #fff;
+    background-color: #1a1a1a;
+    padding: 10px;
+    border: 4px solid #4A4A48;
+    border-radius: 99px;
+    margin-top: -230px;
+
+
+
+}
+
+.derecha-inferior {
+    margin-right: 50px;
+}
+
+/* Tamaño de los iconos de redes sociales */
+.derecha-inferior a img {
+    width: 35px;
+    height: 35px;
+}

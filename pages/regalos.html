@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!-- Permite usar caracteres especiales y tildes    -->
+    <meta charset="UTF-8">
+    <!-- Hace que la pagina sea adptable a dispositivos móviles     -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confiteria Digital Adso</title>
+    <!-- Conexión con el archivo css -->
+    <link rel="stylesheet" href="../styles/regalos.css">
+
+</head>
+
+<body>
+    <!-- Encabezado de la página -->
+    <header>
+        <!-- Logo principal -->
+        <div class="logo">
+            <img src="../assets/logo final.png" alt="logo">
+        </div>
+        <!-- Botón de menú hamburguesa (visible en móviles) -->
+        <button class="menu-btn" id="menu-btn" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="nav-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+
+        <!-- Menú de navegación -->
+        <nav id="nav-menu">
+            <ul class="nav-links">
+                <!-- Opciones de rergistro -->
+                <li class="nav-item active">
+                    <!-- Icono SVG -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="#c6c12f" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-notebook-pen-icon lucide-notebook-pen">
+                        <path d="M13.4 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-7.4" />
+                        <path d="M2 6h4" />
+                        <path d="M2 10h4" />
+                        <path d="M2 14h4" />
+                        <path d="M2 18h4" />
+                        <path
+                            d="M21.378 5.626a1 1 0 1 0-3.004-3.004l-5.01 5.012a2 2 0 0 0-.506.854l-.837 2.87a.5.5 0 0 0 .62.62l2.87-.837a2 2 0 0 0 .854-.506z" />
+                    </svg>
+                    <a href="">Registro</a>
+                </li>
+                <!-- Estas son las opciones de inicio de sesión -->
+                <li class="nav-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="#c6c12f" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-circle-user-round-icon lucide-circle-user-round">
+                        <path d="M17.925 20.056a6 6 0 0 0-11.851.001" />
+                        <circle cx="12" cy="11" r="4" />
+                        <circle cx="12" cy="12" r="10" />
+                    </svg>
+                    <a href="">Iniciar sesión</a>
+                </li>
+                <li class="nav-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="#c6c12f" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-shopping-cart-icon lucide-shopping-cart">
+                        <circle cx="8" cy="21" r="1" />
+                        <circle cx="19" cy="21" r="1" />
+                        <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12" />
+                    </svg>
+                    <a href="">Carrito</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Esta sección de los enlaces de navegación entre dulceria y regalos -->
+    <section class="main-content">
+
+        <!-- Enlaces principales de navegación -->
+        <nav class="izquierda-superior" aria-label="Categorías principales">
+            <a href="./index.html">Confiteria</a>
+            <a href="#">Regalos</a>
+        </nav>
+
+        <!-- Redes sociales de contacto -->
+        <div class="derecha-inferior" role="region" aria-label="Redes sociales">
+            <a href="#" class="whatsapp" aria-label="WhatsApp">
+                <img src="../assets/images/whatsapp.png" alt="WhatsApp">
+            </a>
+            <a href="#" aria-label="Twitter">
+                <img src="../assets/images/twitter.png" alt="Twitter">
+            </a>
+            <a href="#" aria-label="Facebook">
+                <img src="../assets/images/facebook.png" alt="Facebook">
+            </a>
+            <a href="#" aria-label="Instagram">
+                <img src="../assets/images/instagram.png" alt="Instagram">
+            </a>
+        </div>
+
+        <!-- Slider de fondo (oculto para accesibilidad al ser meramente decorativo) -->
+        <div class="slider-wrapper" aria-hidden="true">
+            <img src="../assets/regalos/reglaos1.png" class="slide active" alt="" role="presentation">
+            <img src="../assets/regalos/regalo2.png" class="slide" alt="" role="presentation">
+            <img src="../assets/regalos/regalos3.png" class="slide" alt="" role="presentation">
+        </div>
+
+    </section>
+
+    <!-- sección de productos -->
+    <section class="productos">
+        <!-- Botones de acceso rapido -->
+        <div class="acciones">
+            <a href="#" class="btn-accion">Pedidos</a>
+            <a href="../pages/preferencial.html" class="btn-accion">Preferencial</a>
+            <a href="#" class="btn-accion">Quienes somos</a>
+        </div>
+        <!-- Primera fila de productos -->
+        <div class="filas">
+            <!-- Tarjeta de producto -->
+            <div class="card">
+                <!-- Contenido de la tarjeta -->
+                <div class="content">
+                    <!-- Imagen del producto -->
+                    <img src="../assets/regalos/stich.png" alt="Productos de la confiteria digital">
+                    <!-- Información del producto -->
+                    <div class="text">
+                        <p>Peluche de stich</p>
+                        <p>$ 30.000</p>
+                    </div>
+                </div>
+                <!-- boton de compra -->
+                <button class="btn-productos">Añadir al carrito</button>
+            </div>
+            <div class="card">
+                <div class="content">
+                    <img src="../assets/regalos/perfume.png" alt="Productos de la confiteria digital">
+                    <div class="text">
+                        <p>Perfume Chanel</p>
+                        <p>$ 44.900</p>
+                    </div>
+                </div>
+                <button class="btn-productos">Añadir al carrito</button>
+            </div>
+            <div class="card">
+                <div class="content">
+                    <img src="../assets/regalos/canvas.png" alt="Productos de la confiteria digital">
+                    <div class="text">
+                        <p>Pink Cut</p>
+                        <p>$ 2.000</p>
+                    </div>
+                </div>
+                <button class="btn-productos">Añadir al carrito</button>
+            </div>
+            <div class="card">
+                <div class="content">
+                    <img src="../assets/regalos/perfume y crema.png" alt="Productos de la confiteria digital">
+                    <div class="text">
+                        <p>Perfume y creama de mujer</p>
+                        <p>$ 8.000</p>
+                    </div>
+                </div>
+                <button class="btn-productos">Añadir al carrito</button>
+            </div>
+        </div>
+
+        <div class="filas">
+            <div class="card">
+                <div class="content">
+                    <img src="../assets/regalos/bolso.png" alt="Productos de la confiteria digital">
+                    <div class="text">
+                        <p>Maletin pink coach bag </p>
+                        <p>$ 150.000</p>
+                    </div>
+                </div>
+                <button class="btn-productos">Añadir al carrito</button>
+            </div>
+
+            <div class="card">
+                <div class="content">
+                    <img src="../assets/regalos/gorra.png" alt="Productos de la confiteria digital">
+                    <div class="text">
+                        <p>New Era Yankees Snapback</p>
+                        <p>$ 15.000</p>
+                    </div>
+                </div>
+                <button class="btn-productos">Añadir al carrito</button>
+            </div>
+
+            <div class="card">
+                <div class="content">
+                    <img src="../assets/regalos/oso rosa." alt="Productos de la confiteria digital">
+                    <div class="text">
+                        <p>Peluche suave</p>
+                        <p>$ 30.000</p>
+                    </div>
+                </div>
+                <button class="btn-productos">Añadir al carrito</button>
+            </div>
+
+            <div class="card">
+                <div class="content">
+                    <img src="../assets/regalos/flores.png" alt="Productos de la confiteria digital">
+                    <div class="text">
+                        <p>Almohaditas esponjocitas y suaves</p>
+                        <p>$ 20.000</p>
+                    </div>
+                </div>
+                <button class="btn-productos">Añadir al carrito</button>
+            </div>
+        </div>
+    </section>
+    <!-- Menu de filtros -->
+
+    <!-- Categorias para filtrar productos  -->
+    <div class="contenedor">
+        <nav class="menu-categorias">
+            <a href="#">Marca</a>
+            <a href="#">Tipo</a>
+            <a href="#">Precio</a>
+            <a href="#">Novedades</a>
+        </nav>
+    </div>
+
+    </div>

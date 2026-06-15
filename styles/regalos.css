@@ -1,0 +1,348 @@
+* Reinicia los estilos predeterminados del navedador */
+* {
+    margin: 0;
+    padding: 0;
+    /* Incluye padding y border dentro del tamaño total */
+    box-sizing: border-box;
+
+}
+
+
+/* encabezado principal */
+header {
+    /* Organiza los elementos en fila */
+    display: flex;
+    /* Separa logo y menú */
+    justify-content: space-between;
+    /* Centra verticalmente */
+    align-items: center;
+    padding: 20px;
+    background-color: #010101;
+    border: 4px solid #c6c12f;
+}
+
+/* Botón de menú hamburguesa - oculto por defecto en desktop */
+.menu-btn {
+    display: none;
+}
+
+/* contenedor del logo */
+.logo {
+    width: 220px;
+    height: 125px;
+}
+
+/* Imagen del logo */
+.logo img {
+    width: 80%;
+    height: 100%;
+}
+
+/* menú de navegación */
+.nav-links {
+    display: flex;
+    /* Espacio entre elementos */
+    gap: 20px;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Quita el subrayado de los enlaces */
+.nav-item a {
+    text-decoration: none;
+}
+
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    min-width: 120px;
+    text-align: center;
+}
+
+/* Tamaño de los iconos SVG */
+.nav-item svg {
+    width: 60px;
+    height: 60px;
+}
+
+/* Estilo del menú */
+nav .nav-item a {
+    color: #c6c12f;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: 'Inter', sans-serif;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+/* Sección principal con imagen de fondo */
+.main-content {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Slider */
+.slider-wrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 2s ease;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+/* Contenido encima del slider */
+.izquierda-superior,
+.derecha-inferior {
+    position: relative;
+    z-index: 1;
+}
+
+/* Botones ubicados en la parte superior izquierda */
+.izquierda-superior {
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+    margin-top: 40px;
+    margin-left: 20px;
+}
+
+/* Estilo de los en*/
+.izquierda-superior a {
+    color: #c6c12f;
+    font-size: 24px;
+    font-weight: 900;
+    font-family: 'Mplus 1p Bold', sans-serif;
+    text-decoration: none;
+    border: 4px solid #c6c12f;
+    border-radius: 8px;
+    padding: 10px 40px;
+    width: 410px;
+    height: 40px;
+    text-align: center;
+}
+
+/* Redes */
+.derecha-inferior {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-top: 540px;
+    margin-left: 100px;
+
+
+}
+
+/* Botones de redes sociales */
+.derecha-inferior a {
+    color: #fff;
+    background-color: #1a1a1a;
+    padding: 10px;
+    border: 4px solid #4A4A48;
+    border-radius: 99px;
+    margin-top: -230px;
+
+
+
+}
+
+.derecha-inferior {
+    margin-right: 50px;
+}
+
+/* Tamaño de los iconos de redes sociales */
+.derecha-inferior a img {
+    width: 35px;
+    height: 35px;
+}
+
+/* Contenedor de acciones */
+.acciones {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    padding: 30px 20px;
+    margin-top: -100px;
+    flex-wrap: wrap;
+}
+
+/* Botones de acciones  */
+.acciones a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    background-color: #2f2f2f;
+    color: white;
+    font-size: 30px;
+    font-family: Arial, sans-serif;
+    width: 370px;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    white-space: nowrap;
+    transition: 0.3s;
+    border: 2px solid #444;
+}
+
+
+/* Sección de productos */
+.productos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    margin: 20px;
+    background-color: #fff;
+    padding: 20px;
+    gap: 135px;
+
+}
+
+/* Filas de tarjetas */
+.filas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    margin-top: -100px;
+
+}
+
+/* Tarjeta individual */
+.card {
+    background-color: #F6F2F2;
+    border: 4px solid #056F87;
+    border-radius: 10px;
+    padding: 20px;
+    width: 317px;
+    min-height: 388px;
+    display: flex;
+    flex-direction: column;
+
+
+}
+
+/* Imagen del produnto */
+.card img {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    margin: 0 auto;
+    gap: 10px;
+}
+
+/* Contenido interno */
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    flex-grow: 1;
+}
+
+/* Texto del producto */
+.text {
+    text-align: left;
+    font-family: 'Inter', sans-serif;
+    gap: 4px;
+}
+
+.content .text {
+    font-size: 18px;
+    color: #1a1a1a;
+    font-weight: 400;
+    gap: 4px;
+}
+
+/* Boton añadir al carrito */
+.btn-productos {
+    margin-top: auto;
+
+    width: 100%;
+    background-color: #000;
+    color: gold;
+    border: 3px solid gold;
+    border-radius: 30px;
+    padding: 12px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Hover del boton */
+.btn-productos:hover {
+    background-color: #222;
+}
+
+/* Menú de categorías */
+.menu-categorias {
+    width: 100%;
+    height: 140px;
+    display: flex;
+    gap: 5px;
+    background: #1f1f22;
+    padding: 45px 20px 30px;
+}
+
+/* Opciones del menú de categorías */
+.menu-categorias a {
+    flex: 1;
+    text-align: center;
+    text-decoration: none;
+    color: #111;
+    font-size: 22px;
+    padding: 15px 0;
+    font-family: 'Manjari', sans-serif;
+
+    background: linear-gradient(to right,
+            #b87a09,
+            #f3d17a,
+            #b87a09);
+
+    border: 2px solid #9c6a08;
+
+}
+
+.contenido {
+    background-color: #181A1F;
+    min-height: 100px;
+    margin-top: 0px;
+
+}
+
+/* Bordes redondeados extremos*/
+.menu-categorias a:first-child {
+    border-radius: 12px 0 0 12px;
+}
+
+.menu-categorias a:last-child {
+    border-radius: 0 12px 12px 0;
+}
+
+/* Hover de categorias */
+.menu-categorias a:hover {
+    filter: brightness(1.1);
+}
